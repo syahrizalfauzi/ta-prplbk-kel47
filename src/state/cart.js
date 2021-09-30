@@ -10,6 +10,13 @@ export const initialState = {
 
 // Reducer
 export const reducer = (state, action) => {
+  let prevAmount;
+  try {
+    prevAmount = state.items[action.payload.product.id].amount;
+  } catch {
+    prevAmount = 0;
+  }
+
   switch (action.type) {
     case "addItem":
       return {
@@ -18,49 +25,46 @@ export const reducer = (state, action) => {
           ...state.items,
           [action.payload.product.id]: {
             ...action.payload.product,
-            amount: clamp(
-              state.items[action.payload.product.id].amount +
-                action.payload.amount
-            ),
+            amount: clamp(prevAmount + 1),
           },
         },
       };
     case "removeItem":
-      return {
+      const amount = clamp(prevAmount - 1);
+      let nextState = {
         ...state,
         items: {
           ...state.items,
           [action.payload.product.id]: {
             ...action.payload.product,
-            amount: clamp(
-              state.items[action.payload.product.id].amount -
-                action.payload.amount
-            ),
+            amount,
           },
         },
       };
+      if (amount <= 0) {
+        delete nextState.items[action.payload.product.id];
+      }
+      return nextState;
     default:
       return state;
   }
 };
 
 // Action
-export const addItem = (product, amount) => {
+export const addItem = (product) => {
   return {
     type: "addItem",
     payload: {
       product,
-      amount,
     },
   };
 };
 
-export const removeItem = (product, amount) => {
+export const removeItem = (product) => {
   return {
     type: "removeItem",
     payload: {
       product,
-      amount,
     },
   };
 };

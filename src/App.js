@@ -10,6 +10,7 @@ import {
 } from "./state/cart";
 import { ProductPage } from "./components/ProductPage";
 import Filter from "./components/Filter";
+import CartButton from "./components/CartButton";
 
 export const ProductStateContext = createContext(initialProductState);
 export const ProductDispatchContext = createContext();
@@ -45,6 +46,7 @@ const App = () => {
         <FetchingContext.Provider value={isFetching}>
           <ProductDispatchContext.Provider value={productDispatch}>
             <ProductStateContext.Provider value={productState}>
+              <CartButton />
               <Filter />
               <ProductPage />
             </ProductStateContext.Provider>

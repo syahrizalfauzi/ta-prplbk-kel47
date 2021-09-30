@@ -6,7 +6,6 @@ export const initialState = {
 
 // Reducer
 export const reducer = (state, action) => {
-  console.log("reducer! : ", action);
   switch (action.type) {
     case "setProducts":
       return {
