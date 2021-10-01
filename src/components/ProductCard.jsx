@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartDispatchContext, CartStateContext } from "../App";
 import { addItem, removeItem } from "../state/cart";
+import ProductDetailModal from "./ProductDetailModal";
 
 export const ProductCard = ({ product }) => {
   const cartState = useContext(CartStateContext);
   const cartDispatch = useContext(CartDispatchContext);
+  const [showDetail, setShowDetail] = useState(false);
 
+  const handleOpenDetail = () => setShowDetail(true);
+  const handleCloseDetail = () => setShowDetail(false);
   const handleAddToCart = () => cartDispatch(addItem(product));
   const handleRemove = () => cartDispatch(removeItem(product));
 
@@ -19,12 +23,25 @@ export const ProductCard = ({ product }) => {
       }}
     >
       <div
-        style={{ display: "flex", flexDirection: "row", marginBottom: "8px" }}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          marginBottom: "8px",
+        }}
       >
         <img src={product.image} alt={product.title} height="128px" />
         <div style={{ marginLeft: "8px" }}>
           <h4>{product.title}</h4>
-          <b>${product.price}</b>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <b>${product.price}</b>
+            <button onClick={handleOpenDetail}>Detail</button>
+          </div>
         </div>
       </div>
       <button onClick={handleAddToCart}>Tambahkan ke keranjang</button>
@@ -43,6 +60,15 @@ export const ProductCard = ({ product }) => {
           <button onClick={handleRemove}>Hapus</button>
         </div>
       )}
+
+      <ProductDetailModal
+        product={product}
+        onRequestClose={handleCloseDetail}
+        onRemove={handleRemove}
+        onAddToCart={handleAddToCart}
+        isOpen={showDetail}
+        amount={cartState.items[product.id]?.amount ?? 0}
+      />
     </div>
   );
 };

@@ -1,8 +1,12 @@
 import React, { useContext, useMemo } from "react";
-import { CartStateContext } from "../App";
+import { CartDispatchContext, CartStateContext } from "../App";
+import { showModal } from "../state/cart";
+import CartModal from "./CartModal";
+import PaymentModal from "./PaymentModal";
 
 const CartButton = () => {
   const { items } = useContext(CartStateContext);
+  const cartDispatch = useContext(CartDispatchContext);
   const totalPrice = useMemo(() => {
     let countedPrice = 0;
     for (const id in items) {
@@ -10,6 +14,8 @@ const CartButton = () => {
     }
     return countedPrice.toFixed(2);
   }, [items]);
+
+  const handleShowCart = () => cartDispatch(showModal(true));
 
   return (
     <div
@@ -34,7 +40,10 @@ const CartButton = () => {
         <b>Total :</b>
         <p>${totalPrice}</p>
       </div>
-      <button>Checkout</button>
+      <button onClick={handleShowCart}>Checkout</button>
+
+      <CartModal />
+      <PaymentModal />
     </div>
   );
 };

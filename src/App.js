@@ -46,6 +46,7 @@ const App = () => {
         <FetchingContext.Provider value={isFetching}>
           <ProductDispatchContext.Provider value={productDispatch}>
             <ProductStateContext.Provider value={productState}>
+              <h1>Sistem Pembelian Pakaian Online</h1>
               <CartButton />
               <Filter />
               <ProductPage />

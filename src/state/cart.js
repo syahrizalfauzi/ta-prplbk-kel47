@@ -5,6 +5,7 @@ const clamp = (num) => {
 
 // State
 export const initialState = {
+  step: 0,
   items: {},
 };
 
@@ -16,6 +17,8 @@ export const reducer = (state, action) => {
   } catch {
     prevAmount = 0;
   }
+
+  console.log(action);
 
   switch (action.type) {
     case "addItem":
@@ -45,6 +48,21 @@ export const reducer = (state, action) => {
         delete nextState.items[action.payload.product.id];
       }
       return nextState;
+    case "showCart":
+      return {
+        ...state,
+        step: 1,
+      };
+    case "showPayment":
+      return {
+        ...state,
+        step: 2,
+      };
+    case "closeModal":
+      return {
+        ...state,
+        step: 0,
+      };
     default:
       return state;
   }
@@ -66,5 +84,17 @@ export const removeItem = (product) => {
     payload: {
       product,
     },
+  };
+};
+
+export const showModal = (isCartModal) => {
+  return {
+    type: isCartModal ? "showCart" : "showPayment",
+  };
+};
+
+export const closeModal = () => {
+  return {
+    type: "closeModal",
   };
 };

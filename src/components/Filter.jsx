@@ -17,19 +17,16 @@ const Filter = () => {
 
   return (
     <div>
+      Filter
       <div>
-        Urutkan produk
         <select onChange={handleChangeSort}>
           <option value={0}>Nama (ASC)</option>
           <option value={1}>Nama (DESC)</option>
           <option value={2}>Harga (ASC)</option>
           <option value={3}>Harga (DESC)</option>
         </select>
-      </div>
-      <div>
-        Pilih berdasarkan gender :
         <select onChange={handleChangeCategory}>
-          <option value={0}>-</option>
+          <option value={0}>Semua</option>
           <option value={1}>Pria</option>
           <option value={2}>Wanita</option>
         </select>
