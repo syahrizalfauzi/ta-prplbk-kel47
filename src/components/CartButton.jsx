@@ -19,7 +19,7 @@ const CartButton = () => {
   const handleShowCart = () => cartDispatch(showModal(true));
 
   return (
-    <div>
+    <div id="floating">
       <div>
         <b>Total :</b>
         <p>${totalPrice}</p>

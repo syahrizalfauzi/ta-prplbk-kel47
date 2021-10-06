@@ -7,7 +7,7 @@ export const ProductPage = () => {
   const productState = useContext(ProductStateContext);
 
   return (
-    <div>
+    <div id="body">
       {productState.selectedProducts.map((product) => (
         <ProductCard product={product} key={product.id} />
       ))}

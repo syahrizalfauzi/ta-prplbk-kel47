@@ -2,7 +2,6 @@ import { useContext, useMemo } from "react";
 import Modal from "react-modal";
 import { CartDispatchContext, CartStateContext } from "../App";
 import { closeModal } from "../state/cart";
-import "./PaymentModal.css";
 
 const PaymentModal = () => {
   const { step, items } = useContext(CartStateContext);
@@ -20,6 +19,16 @@ const PaymentModal = () => {
   return (
     <Modal
       isOpen={step === 2}
+      style={{
+        content: {
+          top: "50%",
+          left: "50%",
+          right: "auto",
+          bottom: "auto",
+          marginRight: "-50%",
+          transform: "translate(-50%, -50%)",
+        },
+      }}
     >
       <h1>Pembayaran</h1>
       <p>Silahkan lakukan pembayaran ke salah satu rekening berikut sebanyak</p>

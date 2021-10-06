@@ -1,17 +1,17 @@
-body {
+#body {
         display: "flex";
-        flex-Direction: "column";
+        flex-direction: "column";
         margin-Right: "32px";
   }
-style {
-    position: "fixed";
-    right: 32;
-    bottom: 32;
-    background-Color: "white";
-    padding: "16px";
-    display: "flex";
-    flex-Direction: "row";
-    border: "1px solid black";
+#floating {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
   }
 
   button {

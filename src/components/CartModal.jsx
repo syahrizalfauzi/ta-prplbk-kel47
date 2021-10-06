@@ -22,6 +22,16 @@ const CartModal = () => {
     <Modal
       isOpen={step === 1}
       onRequestClose={handleCloseModal}
+      style={{
+        content: {
+          top: "50%",
+          left: "50%",
+          right: "auto",
+          bottom: "auto",
+          marginRight: "-50%",
+          transform: "translate(-50%, -50%)",
+        },
+      }}
     >
       <h1>Keranjang Pesanan</h1>
       {Object.keys(items).length !== 0 ? (
@@ -43,6 +53,7 @@ const CartModal = () => {
                     <img
                       src={product.image}
                       alt={product.title}
+                      id="product-image"
                     />
                     <b>{product.title}</b>
                   </td>

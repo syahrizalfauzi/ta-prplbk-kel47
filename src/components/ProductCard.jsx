@@ -15,18 +15,12 @@ export const ProductCard = ({ product }) => {
   const handleRemove = () => cartDispatch(removeItem(product));
 
   return (
-    <div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          marginBottom: "8px",
-        }}
-      >
-        <img src={product.image} alt={product.title} height="128px" />
-        <div style={{ marginLeft: "8px" }}>
+    <div id="card">
+      <div id="image-title">
+        <img src={product.image} alt={product.title} id="card-thumbnail" />
+        <div id="title-price">
           <h4>{product.title}</h4>
-          <div>
+          <div id="price-detail">
             <b>${product.price}</b>
             <button onClick={handleOpenDetail}>Detail</button>
           </div>

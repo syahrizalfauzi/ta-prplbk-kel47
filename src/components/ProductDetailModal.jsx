@@ -14,14 +14,18 @@ const ProductDetailModal = ({
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
+      style={{
+        content: {
+          top: "50%",
+          left: "50%",
+          right: "auto",
+          bottom: "auto",
+          marginRight: "-50%",
+          transform: "translate(-50%, -50%)",
+        },
+      }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          marginBottom: "8px",
-        }}
-      >
+      <div id="product-detail-body">
         <img src={product.image} alt={product.title} height="256px" />
         <div style={{ marginLeft: "32px", flex: 1 }}>
           <h1>{product.title}</h1>
