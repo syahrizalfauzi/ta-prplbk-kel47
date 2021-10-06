@@ -5,7 +5,6 @@ select {
     width: 250px;
     border: none;
     font-size: 20px;
-    -shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     -webkit-appearance: button;
     appearance: button;
     outline: none;
