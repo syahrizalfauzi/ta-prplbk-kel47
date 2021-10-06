@@ -4,6 +4,7 @@
   padding: 16px;
   display: flex;
   flex-Direction: column;
+  background-color: lightgoldenrodyellow;
 }
 
 #image-title {
