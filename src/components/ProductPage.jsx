@@ -7,11 +7,7 @@ export const ProductPage = () => {
   const productState = useContext(ProductStateContext);
 
   return (
-    <div
-      style={{
-
-      }}
-    >
+    <div>
       {productState.selectedProducts.map((product) => (
         <ProductCard product={product} key={product.id} />
       ))}
