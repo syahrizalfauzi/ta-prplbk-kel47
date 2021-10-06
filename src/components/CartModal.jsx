@@ -73,9 +73,7 @@ const CartModal = () => {
       )}
       <div
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginTop: "16px",
+
         }}
       >
         <button onClick={handleCloseModal}>Tutup</button>
