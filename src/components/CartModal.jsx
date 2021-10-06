@@ -22,9 +22,6 @@ const CartModal = () => {
     <Modal
       isOpen={step === 1}
       onRequestClose={handleCloseModal}
-      style={{
-
-      }}
     >
       <h1>Keranjang Pesanan</h1>
       {Object.keys(items).length !== 0 ? (
@@ -71,11 +68,7 @@ const CartModal = () => {
       ) : (
         <p>Keranjang masih kosong...</p>
       )}
-      <div
-        style={{
-
-        }}
-      >
+      <div>
         <button onClick={handleCloseModal}>Tutup</button>
         {Object.keys(items).length !== 0 && (
           <button onClick={handleOpenPayment}>Bayar</button>
