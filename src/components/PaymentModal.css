@@ -3,7 +3,7 @@ content {
     left: "50%";
     right: "auto";
     bottom: "auto";
-    marginRight: "-50%";
+    margin-Right: "-50%";
     transform: "translate(-50%; -50%)";
-    textAlign: "center";
+    text-Align: "center";
 }
