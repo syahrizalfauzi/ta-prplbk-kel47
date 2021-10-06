@@ -15,9 +15,7 @@ export const ProductCard = ({ product }) => {
   const handleRemove = () => cartDispatch(removeItem(product));
 
   return (
-    <div
-
-    >
+    <div>
       <div
         style={{
           display: "flex",
