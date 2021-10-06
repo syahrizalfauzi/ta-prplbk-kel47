@@ -20,17 +20,6 @@ const PaymentModal = () => {
   return (
     <Modal
       isOpen={step === 2}
-      style={{
-        content: {
-          top: "50%",
-          left: "50%",
-          right: "auto",
-          bottom: "auto",
-          marginRight: "-50%",
-          transform: "translate(-50%, -50%)",
-          textAlign: "center",
-        },
-      }}
     >
       <h1>Pembayaran</h1>
       <p>Silahkan lakukan pembayaran ke salah satu rekening berikut sebanyak</p>
