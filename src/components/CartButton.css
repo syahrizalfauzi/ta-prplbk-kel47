@@ -7,11 +7,12 @@
     position: fixed;
     right: 32px;
     bottom: 32px;
-    background-color: white;
+    background-color: palegoldenrod;
     padding: 16px;
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    border: none;
+    border-radius: 10px;
   }
 
   button {
