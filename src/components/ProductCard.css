@@ -10,3 +10,10 @@ h4  {
     flexDirection: "row";
     justifyContent: "space-between";
   }
+
+img {
+    border-radius: 20px;
+}
+p {
+    color: darkred
+}
