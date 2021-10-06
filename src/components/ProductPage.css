@@ -1,5 +1,5 @@
 body {
 display: "grid";
-gridTemplateColumns: "auto auto auto";
+grid-Template-Columns: "auto auto auto";
 gap: "16px 16px";
 }
