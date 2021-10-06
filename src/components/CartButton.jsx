@@ -19,12 +19,8 @@ const CartButton = () => {
   const handleShowCart = () => cartDispatch(showModal(true));
 
   return (
-    <div
-
-    >
-      <div
-
-      >
+    <div>
+      <div>
         <b>Total :</b>
         <p>${totalPrice}</p>
       </div>
