@@ -3,16 +3,16 @@ content {
     left: "50%";
     right: "auto";
     bottom: "auto";
-    marginRight: "-50%";
+    margin-Right: "-50%";
     transform: "translate(-50%; -50%)";
   };
 
 img {
     height: "64px";
-    marginRight: "8px"}
+    margin-Right: "8px"}
 
 h1 {
     display: "flex";
-    justifyContent: "space-between";
-    marginTop: "16px";
+    justify-Content: "space-between";
+    margin-Top: "16px";
 }
