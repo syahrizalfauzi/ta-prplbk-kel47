@@ -1,0 +1,5 @@
+body {
+display: "grid";
+gridTemplateColumns: "auto auto auto";
+gap: "16px 16px";
+}

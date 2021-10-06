@@ -9,9 +9,7 @@ export const ProductPage = () => {
   return (
     <div
       style={{
-        display: "grid",
-        gridTemplateColumns: "auto auto auto",
-        gap: "16px 16px",
+
       }}
     >
       {productState.selectedProducts.map((product) => (
