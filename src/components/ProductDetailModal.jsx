@@ -14,9 +14,6 @@ const ProductDetailModal = ({
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      style={{
-
-      }}
     >
       <div
         style={{
