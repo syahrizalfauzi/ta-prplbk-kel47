@@ -28,9 +28,7 @@ export const ProductCard = ({ product }) => {
         <img src={product.image} alt={product.title} height="128px" />
         <div style={{ marginLeft: "8px" }}>
           <h4>{product.title}</h4>
-          <div
-
-          >
+          <div>
             <b>${product.price}</b>
             <button onClick={handleOpenDetail}>Detail</button>
           </div>
