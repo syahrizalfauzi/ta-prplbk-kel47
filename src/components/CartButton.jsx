@@ -3,6 +3,7 @@ import { CartDispatchContext, CartStateContext } from "../App";
 import { showModal } from "../state/cart";
 import CartModal from "./CartModal";
 import PaymentModal from "./PaymentModal";
+import "./CartButton.css";
 
 const CartButton = () => {
   const { items } = useContext(CartStateContext);
@@ -19,23 +20,10 @@ const CartButton = () => {
 
   return (
     <div
-      style={{
-        position: "fixed",
-        right: 32,
-        bottom: 32,
-        backgroundColor: "white",
-        padding: "16px",
-        display: "flex",
-        flexDirection: "row",
-        border: "1px solid black",
-      }}
+
     >
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          marginRight: "32px",
-        }}
+
       >
         <b>Total :</b>
         <p>${totalPrice}</p>

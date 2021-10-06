@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { CartDispatchContext, CartStateContext } from "../App";
 import { addItem, removeItem } from "../state/cart";
 import ProductDetailModal from "./ProductDetailModal";
+import "./ProductCard.css";
 
 export const ProductCard = ({ product }) => {
   const cartState = useContext(CartStateContext);

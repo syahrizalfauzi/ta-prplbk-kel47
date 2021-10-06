@@ -2,6 +2,7 @@ import { useContext, useMemo } from "react";
 import Modal from "react-modal";
 import { CartDispatchContext, CartStateContext } from "../App";
 import { closeModal, showModal } from "../state/cart";
+import "./CartModal.css";
 
 const CartModal = () => {
   const { step, items } = useContext(CartStateContext);

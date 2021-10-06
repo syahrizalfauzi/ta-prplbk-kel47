@@ -1,0 +1,15 @@
+body {
+        display: "flex";
+        flexDirection: "column";
+        marginRight: "32px";
+  }
+style {
+    position: "fixed";
+    right: 32;
+    bottom: 32;
+    backgroundColor: "white";
+    padding: "16px";
+    display: "flex";
+    flexDirection: "row";
+    border: "1px solid black";
+  }

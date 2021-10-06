@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { ProductDispatchContext } from "../App";
 import { changeCategory, sortProducts } from "../state/products";
+import "./Filter.css";
 
 const Filter = () => {
   const [category, setCategory] = useState(0);
