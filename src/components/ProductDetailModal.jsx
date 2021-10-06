@@ -34,7 +34,7 @@ const ProductDetailModal = ({
             }}
           >
             <button onClick={onRemove}>-</button>
-            <p style={{ margin: "0 16px 0 16px" }}>{amount}</p>
+            <p>{amount}</p>
             <button onClick={onAddToCart}>+</button>
           </div>
         </div>
