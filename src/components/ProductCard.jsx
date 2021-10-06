@@ -16,12 +16,7 @@ export const ProductCard = ({ product }) => {
 
   return (
     <div
-      style={{
-        border: "1px solid black",
-        padding: "16px",
-        display: "flex",
-        flexDirection: "column",
-      }}
+
     >
       <div
         style={{
@@ -34,11 +29,7 @@ export const ProductCard = ({ product }) => {
         <div style={{ marginLeft: "8px" }}>
           <h4>{product.title}</h4>
           <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
+
           >
             <b>${product.price}</b>
             <button onClick={handleOpenDetail}>Detail</button>
