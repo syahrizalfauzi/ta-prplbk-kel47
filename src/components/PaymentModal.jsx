@@ -18,7 +18,7 @@ const PaymentModal = () => {
 
   return (
     <Modal
-      isOpen={step === 2}
+      isOpen={step === 3}
       style={{
         content: {
           top: "50%",
@@ -37,7 +37,14 @@ const PaymentModal = () => {
       <p>21120118130066 a.n. Muhammad Syahrizal Fauzi</p>
       <h2>BCA</h2>
       <p>21120118140071 a.n. Muhammad Dzaky Naufal</p>
-      <button onClick={handleCloseModal}>Selesai & Tutup</button>
+      <b>
+        Lalu hubungi ke 081xxxxxxxxx via WhatsApp untuk memberi bukti transfer
+        dan cantumkan ID pembayaran berikut :
+      </b>
+      <p>{Date.now()}</p>
+      <div>
+        <button onClick={handleCloseModal}>Selesai & Tutup</button>
+      </div>
     </Modal>
   );
 };

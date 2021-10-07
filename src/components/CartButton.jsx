@@ -4,6 +4,7 @@ import { showModal } from "../state/cart";
 import CartModal from "./CartModal";
 import PaymentModal from "./PaymentModal";
 import "./CartButton.css";
+import AddresModal from "./AddressModal";
 
 const CartButton = () => {
   const { items } = useContext(CartStateContext);
@@ -16,7 +17,7 @@ const CartButton = () => {
     return countedPrice.toFixed(2);
   }, [items]);
 
-  const handleShowCart = () => cartDispatch(showModal(true));
+  const handleShowCart = () => cartDispatch(showModal(1));
 
   return (
     <div id="floating">
@@ -27,6 +28,7 @@ const CartButton = () => {
       <button onClick={handleShowCart}>Checkout</button>
 
       <CartModal />
+      <AddresModal />
       <PaymentModal />
     </div>
   );

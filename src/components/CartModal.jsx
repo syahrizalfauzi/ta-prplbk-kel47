@@ -16,7 +16,7 @@ const CartModal = () => {
   }, [items]);
 
   const handleCloseModal = () => cartDispatch(closeModal());
-  const handleOpenPayment = () => cartDispatch(showModal(false));
+  const handleOpenAddress = () => cartDispatch(showModal(2));
 
   return (
     <Modal
@@ -82,7 +82,7 @@ const CartModal = () => {
       <div>
         <button onClick={handleCloseModal}>Tutup</button>
         {Object.keys(items).length !== 0 && (
-          <button onClick={handleOpenPayment}>Bayar</button>
+          <button onClick={handleOpenAddress}>Lanjut</button>
         )}
       </div>
     </Modal>
